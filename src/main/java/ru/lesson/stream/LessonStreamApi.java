@@ -39,8 +39,9 @@ public class LessonStreamApi {
      * Получить средний рейтнг всех сотрудников.
      */
     public double task3(List<Employee> employees) {
-        return employees.stream()
-                .collect(averagingDouble(Employee::getRating));
+       return employees.stream().mapToInt(i-> i.getRating()).sum()/ employees.size();
+
+
     }
 
     /**

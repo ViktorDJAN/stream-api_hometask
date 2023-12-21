@@ -24,6 +24,7 @@ public class LessonStreamApiTest {
         );
 
         List<Employee> result = lessonStreamApi.task1(employees);
+        System.out.println(result);
         assertNotNull(result);
         assertEquals(2, result.size());
         assertThat(result, contains(employee3, employee4));
@@ -42,6 +43,7 @@ public class LessonStreamApiTest {
         assertNotNull(result);
         assertEquals(2, result.size());
         assertThat(result, contains("Ivan=40", "Bob=45"));
+        System.out.println(result);
     }
 
     @Test
@@ -53,6 +55,7 @@ public class LessonStreamApiTest {
 
         double result = lessonStreamApi.task3(employees);
         assertEquals(50.0, result, 0.0);
+        System.out.println(result);
     }
 
     @Test
@@ -67,6 +70,7 @@ public class LessonStreamApiTest {
         List<Employee> employeeDepartment2 = Arrays.asList(employee3, employee4, employee5);
 
         List<Employee> result = lessonStreamApi.task4(Arrays.asList(employeeDepartment1, employeeDepartment2));
+        System.out.println(result);
         assertNotNull(result);
         assertEquals(5, result.size());
         assertEquals(employee4, result.get(0));
@@ -140,6 +144,7 @@ public class LessonStreamApiTest {
         assertEquals(80.0, result.get(PositionType.DEVELOPER), 0.0);
         assertEquals(75.0, result.get(PositionType.TESTER), 0.0);
         assertEquals(70.0, result.get(PositionType.ANALYST), 0.0);
+        System.out.println(result);
     }
 
     @Test
